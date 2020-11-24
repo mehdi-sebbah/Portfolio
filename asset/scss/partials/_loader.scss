@@ -1,0 +1,53 @@
+.loader{
+    position: absolute;
+    transform: translateY(0);
+    width: 100%;
+    height: 100vh;
+    background:rgba(28, 40, 51 , 1);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.bounce{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 10px;
+    background: rgba(253, 254, 254,1);
+    border-radius: 50%;
+    display: inline-block;
+    animation: bounce 1.5s infinite ease-in-out both ;
+}
+.bounce:nth-child(2){
+    animation-delay: 0.2s;
+}
+.bounce:nth-child(3){
+    animation-delay: 0.4s;
+}
+
+
+@keyframes bounce{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.fondu-out{
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    animation: trans 0.5s forwards;
+}
+
+@keyframes trans{
+    to{
+        transform: translateY(-100%);
+    }
+}

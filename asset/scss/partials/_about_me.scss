@@ -1,0 +1,39 @@
+.about_me{
+    height: 500px;
+    margin: 170px 110px 0 110px;
+    display: flex;
+    background: linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,1),rgba(255,255,255,.1));
+}
+
+.content_about_me{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.about_me_title{
+    opacity: 0;
+    transform: translateY(50px);
+    height: 100%;
+    font-size: $size_title;
+    padding-left: 50px;
+    transition: 1s ease-in-out;
+    h2{
+        font-weight: 400;
+        padding-top: 10px;
+    }
+    
+}
+
+.about_me_text{
+    opacity: 0;
+    transform: translateY(50px);
+    padding-top: 40px;
+    max-width: 600px;
+    font-size: $size_text;
+    line-height: 2.2rem;
+    transition: 1s ease-in-out;
+}

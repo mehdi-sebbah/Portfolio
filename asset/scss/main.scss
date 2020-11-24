@@ -1,0 +1,25 @@
+@import 'partials/reset';
+@import 'partials/config';
+@import 'partials/typo';
+@import 'partials/button';
+@import 'partials/svg_main';
+@import 'partials/about_me';
+@import 'partials/home';
+@import 'partials/skills';
+@import 'partials/svg_stack';
+@import 'partials/contact';
+@import 'partials/loader';
+@import 'partials/content_void';
+
+.body{
+    background: #F7F9F9;//#EE7752, #E73C7E, #23A6D5, #23D5AB
+    background-size: 400% 400%;
+}
+
+
+
+/***** Header *****/
+
+footer{
+    height: 500px;
+}

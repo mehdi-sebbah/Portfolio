@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.home{
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.intro_and_button_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .intro{
+        padding-top: 100px;
+    }
+    
+    .buttons_home{
+        display: flex;
+        justify-content: space-between;
+    }
+}

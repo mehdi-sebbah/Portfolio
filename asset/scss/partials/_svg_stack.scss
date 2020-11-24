@@ -1,0 +1,67 @@
+.marquee_back{
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(black,rgba(255,255,255,1),rgba(255,255,255,1));
+
+    animation: opacMarquee 3s ease forwards 2s;
+
+    .back{
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 0 40px;
+        
+        white-space: nowrap;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-weight: 300;
+
+        animation: marqueeUp 25s linear infinite;
+    }
+}
+.marquee_front{
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(rgba(255,255,255,1),rgba(235,237,239,1));
+
+    animation: opacMarquee 3s ease forwards 2s;
+
+    .front{
+        font-size: 2rem;
+        font-weight: 100;
+        margin:0 40px;
+
+        white-space: nowrap;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-weight: 300;
+
+        animation: marqueeDown 25s linear infinite 1s;
+    }
+}
+
+@keyframes marqueeUp{
+    0%{
+        transform: translateY(-144%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes marqueeDown{
+    0%{
+        transform: translateY(-144%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacMarquee{
+    to{
+        opacity: 1;
+    }
+}
