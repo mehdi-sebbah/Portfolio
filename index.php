@@ -10,7 +10,7 @@
     <div class="intro_and_button_home">
         <div class="intro">
             <p>Moi c'est Mehdi Sebbah,</p>
-            <?php include_once 'asset/svg/svg_main.php' ?>
+            <p class="intro_dev">DEVELOPPEUR WEB</p>
         </div>
         <div class="buttons_home">
             <a href="index.php" class="button">CONTACT</a>
@@ -45,6 +45,7 @@
                 <input type="text" placeholder="NOM">
                 <input type="Email" placeholder="EMAIL">
             </div>
+            <input type="text" placeholder="SUJET">
             <textarea name="" id="" placeholder="VOTRE MESSAGE" rows="4"></textarea>
             <div class="coordonne">
                 <div>

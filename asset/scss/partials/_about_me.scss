@@ -2,16 +2,16 @@
     height: 500px;
     margin: 170px 110px 0 110px;
     display: flex;
-    background: linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,1),rgba(255,255,255,.1));
 }
 
 .content_about_me{
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2px;
     overflow: hidden;
+    background: linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,1),rgba(255,255,255,.1));
 }
 
 .about_me_title{

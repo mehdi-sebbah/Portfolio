@@ -4,7 +4,8 @@
 }
 
 .home{
-
+    background: url(../../img/light-bulbs-5488573_1920.jpg);
+    background-size: cover;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -19,6 +20,13 @@
 
     .intro{
         padding-top: 100px;
+        .intro_dev{
+            font-family: 'designer';
+            font-size: 7rem;
+        }
+        p{
+            margin: 0;
+        }
     }
     
     .buttons_home{
