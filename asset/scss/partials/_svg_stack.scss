@@ -1,65 +1,82 @@
 .marquee_back{
     opacity: 0;
-    height: 100%;
+    line-height: unset;
+    height: auto;
     display: flex;
     overflow: hidden;
-    background: linear-gradient(black,rgba(255,255,255,1),rgba(255,255,255,1));
+    background: rgba(255,255,255,.2);
 
-    animation: opacMarquee 3s ease forwards 2s;
+    animation: opacMarquee 3s ease forwards ;
 
-    .back{
+    & div{
         font-size: 2rem;
-        font-weight: 100;
-        margin: 0 40px;
-        
+        font-weight: 700;
         white-space: nowrap;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        font-weight: 300;
 
-        animation: marqueeUp 25s linear infinite;
+        animation: animateBack 40s linear infinite;
+        animation-delay: -40s;
+    }
+    & div:nth-child(2){
+        animation: animateBack2 40s linear infinite;
+        animation-delay: -20s;
     }
 }
+
 .marquee_front{
     opacity: 0;
-    height: 100%;
+    height: auto;
     display: flex;
     overflow: hidden;
-    background: linear-gradient(rgba(255,255,255,1),rgba(235,237,239,1));
+    background: rgba(255,255,255,.4);
 
     animation: opacMarquee 3s ease forwards 2s;
 
-    .front{
+    & div{
         font-size: 2rem;
-        font-weight: 100;
-        margin:0 40px;
-
+        font-weight: 400;
         white-space: nowrap;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        font-weight: 300;
 
-        animation: marqueeDown 25s linear infinite 1s;
+        animation: animateFront 60s linear infinite;
+        animation-delay: -60s;
+    }
+    & div:nth-child(2){
+        animation: animateFront2 60s linear infinite;
+        animation-delay: -30s;
     }
 }
-
-@keyframes marqueeUp{
+@keyframes animateBack{
     0%{
-        transform: translateY(-144%);
+        transform: translateX(100%);
     }
     100%{
-        transform: translateY(0);
+        transform: translateX(-100%);
     }
 }
-@keyframes marqueeDown{
+@keyframes animateBack2{
     0%{
-        transform: translateY(-144%);
+        transform: translateX(0);
     }
     100%{
-        transform: translateY(0);
+        transform: translateX(-200%);
     }
 }
 
+@keyframes animateFront{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animateFront2{
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 @keyframes opacMarquee{
     to{
         opacity: 1;

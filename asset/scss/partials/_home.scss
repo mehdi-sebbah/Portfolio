@@ -1,25 +1,23 @@
-.main{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .home{
-    background: url(../../img/light-bulbs-5488573_1920.jpg);
-    background-size: cover;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url("../../asset/img/back.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
 }
 
 .intro_and_button_home{
+    height: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
 
     .intro{
-        padding-top: 100px;
         .intro_dev{
             font-family: 'designer';
             font-size: 7rem;
@@ -32,5 +30,6 @@
     .buttons_home{
         display: flex;
         justify-content: space-between;
+
     }
 }

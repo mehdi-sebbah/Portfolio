@@ -7,22 +7,17 @@
     </div>
 </div>
 <section class="home">
+    <p>Mehdi Sebbah,</p>
     <div class="intro_and_button_home">
         <div class="intro">
-            <p>Moi c'est Mehdi Sebbah,</p>
             <p class="intro_dev">DEVELOPPEUR WEB</p>
         </div>
         <div class="buttons_home">
             <a href="index.php" class="button">CONTACT</a>
-            <a href="index.php" class="button">MES PROJETS</a>
+            <a href="index.php" class="button">PROJETS</a>
         </div>
     </div>
-    <div class="marquee_back">
-        <div class="back">BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK BACK</div>
-    </div>
-    <div class="marquee_front">
-        <div class="front">FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT</div>
-    </div>
+
 </section>
 <div class="content_void"></div>
 <section class="about_me">

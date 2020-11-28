@@ -2,18 +2,17 @@
     position: relative;
     border: none;
     background: transparent;
-    color: black;
-    font-size: 20px;
+    color: white;
+    font-size: 2rem;
     font-family: $spartan;
     font-weight: 400;
-    margin: 30px 0;
     padding: $padding_btn;
     overflow: hidden;
     transition: 0.1s all ease;
     
     &::before{
-        background: black;
-        opacity: 0.8;
+
+        background-color: white;
         border-radius: 3px;
         content: "";
         width: 0;
@@ -26,12 +25,13 @@
         transition: all 0.2s ease;
     }
     &:hover{
-        color: white;
+        color: black;
         border: hidden;
         transition: all 0.4s ease;
         &::before{
         z-index: -1;
         width: 100%;
+
         }
     } 
 };
