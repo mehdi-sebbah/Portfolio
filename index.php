@@ -10,17 +10,20 @@
     <p>Mehdi Sebbah,</p>
     <div class="intro_and_button_home">
         <div class="intro">
-            <p class="intro_dev">DEVELOPPEUR WEB</p>
+            <p class="intro_dev">DEVELOPPEUR <span class="span_web">WEB</span></p>
         </div>
         <div class="buttons_home">
             <a href="index.php" class="button">CONTACT</a>
             <a href="index.php" class="button">PROJETS</a>
         </div>
+        <a href="#about_me" >
+            <div class="scroll_down"></div>
+        </a>
     </div>
 
 </section>
 <div class="content_void"></div>
-<section class="about_me">
+<section id="about_me" class="about_me">
     <?php require_once 'about_me.php' ?>
 </section>
 <section class="section_skills">
@@ -31,7 +34,7 @@
     <?php require_once 'portefolio.php' ?>
 </section>
 
-<section>
+<section id="contact">
     <?php include_once 'contact.php' ?>
     <div class="contact">
         <h2 class="intro_contact">ME CONTACTER</h2>
@@ -51,6 +54,7 @@
             </div>
         </form>
     </div>
-</section id="contact">
+    <div class="contact2"></div>
+</section>
 
 <?php include_once 'asset/footer.php' ?>

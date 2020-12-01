@@ -10,12 +10,3 @@
             </p>
         </div>
     </div>
-    <div class="skills">
-        <ul>
-            <li>HTML</li>
-            <li>CSS / BOOTSTRAP</li>
-            <li>PHP / Symphony</li>
-            <li>SQL / MySQL</li>
-            <li>JavaScript / AJAX / VueJS </li>
-        </ul>
-    </div>

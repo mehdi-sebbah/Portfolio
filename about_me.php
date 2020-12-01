@@ -1,6 +1,8 @@
+<div class="picture_profil"><img src="asset/img/photo_profil.jpg" alt=""></div>
 <div class="content_about_me">
     <div class="about_me_title">
-        <h2 class="presentation_title">À PROPOS DE MOI</h2>
+        <h2>MOI, C'EST MEHDI DEVELOPPEUR WEB FRONT & BACK.</h2>
+        <div class="content_bottom_title"></div>
     </div>
     <div class="about_me_text">
         <p>
@@ -9,3 +11,4 @@
         </p>
     </div>
 </div>
+<button class="button">Compétences</button>

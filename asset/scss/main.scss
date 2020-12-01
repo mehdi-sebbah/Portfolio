@@ -10,8 +10,8 @@
 @import 'partials/loader';
 @import 'partials/content_void';
 
-.body{
-
+html{
+    scroll-behavior: smooth;
 }
 
 
@@ -19,7 +19,8 @@
 /***** Header *****/
 
 footer{
-    height: 500px;
+    height: 200px;
+    background-color: black;
 }
 
 @font-face{

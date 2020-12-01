@@ -2,7 +2,7 @@
     position: relative;
     border: none;
     background: transparent;
-    color: white;
+    color: black;
     font-size: 2rem;
     font-family: $spartan;
     font-weight: 400;
@@ -12,7 +12,7 @@
     
     &::before{
 
-        background-color: white;
+        background-color: black;
         border-radius: 3px;
         content: "";
         width: 0;
@@ -25,7 +25,7 @@
         transition: all 0.2s ease;
     }
     &:hover{
-        color: black;
+        color: white;
         border: hidden;
         transition: all 0.4s ease;
         &::before{
