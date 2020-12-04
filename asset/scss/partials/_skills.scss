@@ -1,0 +1,43 @@
+.section_skills{
+    padding:40px 0;
+    margin: 0 auto;
+    background-color:$color_secondary;
+    h2{
+        text-align: center;
+        font-size: $size_title;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    p{
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+
+    h3{
+        margin-left: 10%;
+        font-size: $size_text_btn;
+    }
+}
+
+.skills_list{
+    display: flex;
+    width: auto;
+    margin: 20px auto;
+
+    ul{
+
+        display: flex;
+        justify-content: center;
+
+        li{
+            margin: 15px 55px;
+        }
+    }
+}

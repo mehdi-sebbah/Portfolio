@@ -1,8 +1,15 @@
 .about_me{
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.picture_profil{
+    img{
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    }
 }
 
 .content_about_me{
@@ -27,7 +34,7 @@
     content: '';
     width: 70px;
     height: 5px;
-    background-color: black;
+    background-color: $color_bleu;
 }
 
 .about_me_text{
@@ -45,6 +52,11 @@
 
 
 
+
+
+
+
+/*
 .skills{
     display: flex;
     justify-content: space-around;
@@ -79,4 +91,4 @@
         transition: all 0.5s ease-in-out 1.4s; 
     }
 
-}
+}*/

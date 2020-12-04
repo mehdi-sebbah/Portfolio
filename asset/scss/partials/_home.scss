@@ -2,7 +2,7 @@
 
 .home{
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url("../../asset/img/back.jpg");
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5), rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("../../asset/img/back.jpg");
     background-size: 100%;
     background-attachment: fixed;
     height: 100vh;
@@ -32,6 +32,16 @@
         display: flex;
         justify-content: space-between;
 
+        a{
+            color: white;
+
+            &::before{
+                background-color: white;
+            }
+            &:hover{
+                color: black;
+            }
+        }
     }
 }
 

@@ -26,11 +26,11 @@
         content: "";
         position: absolute;
         width: 50%;
-        height: 1px;
+        height: 2px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, 50%);
-        background: black;
+        background: $color_bleu;
         margin: 55px 0;
     }   
 }
