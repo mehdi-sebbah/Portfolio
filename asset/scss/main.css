@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5 {
 a {
   text-decoration: none;
   padding: 0;
+  color: white;
 }
 
 .intro p {
@@ -385,7 +386,16 @@ a {
 }
 
 .skills_list ul li {
+  position: relative;
   margin: 15px 55px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skills_list ul li:hover {
+  opacity: 0.2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .marquee_back {
@@ -750,13 +760,129 @@ a {
   }
 }
 
+.portfolio {
+  padding: 40px 0;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.portfolio_content {
+  max-width: 1300px;
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 400px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.portfolio_content .card {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.portfolio_content .card:hover .box {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.box .imgBx {
+  height: 100%;
+  width: 100%;
+}
+
+.box .imgBx img {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.box .content_bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #e5e7e9;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.box .content_bx div {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  padding: 20px 50px;
+  background: #1ABC9C;
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.box .content_bx div:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.box .content_bx div a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.box .content_bx div a:hover {
+  opacity: 0.4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 /***** Header *****/
 footer {
-  height: 200px;
+  height: 50px;
   background-color: #e5e7e9;
 }
 

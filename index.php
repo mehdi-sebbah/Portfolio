@@ -14,7 +14,7 @@
         </div>
         <div class="buttons_home">
             <a href="index.php" class="button">CONTACT</a>
-            <a href="index.php" class="button">PROJETS</a>
+            <a href="#portfolio" class="button">PROJETS</a>
         </div>
         <a href="#about_me">
             <div class="scroll_down"></div>
@@ -32,12 +32,12 @@
     <div class="skills">
         <div class="skills_list">
             <ul>
-                <li><img src="asset/img/html_icon.png" alt="icon_html"></li>
-                <li><img src="asset/img/css_icon.png" alt="icon_css"></li>
-                <li><img src="asset/img/sass_icon.png" alt="icon_sass"></li>
-                <li><img src="asset/img/bootstrap_icon.png" alt="icon_bootstrap"></li>
-                <li style="--i:5;"><img src="asset/img/js_icon.png" alt="javascript_icon"></li>
-                <li style="--i:6;"><img src="asset/img/vue_js_icon.png" alt="vue_js_icon"></li>
+                <li><img src="asset/img/html_icon.png" alt="icon_html">HTML</li>
+                <li><img src="asset/img/css_icon.png" alt="icon_css">CSS</li>
+                <li><img src="asset/img/sass_icon.png" alt="icon_sass">SASS</li>
+                <li><img src="asset/img/bootstrap_icon.png" alt="icon_bootstrap">BOOTSTRAP</li>
+                <li><img src="asset/img/js_icon.png" alt="javascript_icon">JAVASCRIPT</li>
+                <li><img src="asset/img/vue_js_icon.png" alt="vue_js_icon">VUEJS</li>
             </ul>
         </div>
         <div class="skills_list">
@@ -60,7 +60,7 @@
     </div>
 </section>
 
-<section class="portefolio">
+<section id="portfolio" class="portfolio">
     <?php require_once 'portefolio.php' ?>
 </section>
 

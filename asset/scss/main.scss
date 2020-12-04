@@ -8,6 +8,7 @@
 @import 'partials/svg_stack';
 @import 'partials/contact';
 @import 'partials/loader';
+@import 'partials/portfolio';
 
 html{
     scroll-behavior: smooth;
@@ -18,7 +19,7 @@ html{
 /***** Header *****/
 
 footer{
-    height: 200px;
+    height: 50px;
     background-color: $color_secondary;
 }
 

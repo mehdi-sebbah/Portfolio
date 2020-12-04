@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
    //bg.style.backgroundSize = 100 +window.pageYOffset/12 +'%';
     bg.style.opacity = 1 - +window.pageYOffset/900;
     
-    if(scrollValue > 0.11){
+    if(scrollValue > 0.41){
         textAbout.style.opacity ='1';
         textAbout.style.transform = 'none';
     }
