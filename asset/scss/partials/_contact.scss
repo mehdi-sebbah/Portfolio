@@ -1,6 +1,8 @@
 
 #contact{
+    height: 90vh;
     display: flex;
+    background-color: $color_secondary;
     
 }
 .contact{
@@ -8,30 +10,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 60%;
-
-}
-.coordonne{
-    display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 
 .intro_contact{
     position: relative;
     margin: 55px 0;
-    font-size: 1.8rem;
-    font-weight: 400;
-    &::before{
-        content: "";
+    font-size: $size_title;
+    font-weight: 900;
+    &::after{
+        //content: "";
         position: absolute;
-        width: 50%;
-        height: 2px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 50%);
+        width: 80%;
+        height: 5px;
+        top: 100%;
+        left: 4px;
+
         background: $color_bleu;
-        margin: 55px 0;
+ 
     }   
 }
 
@@ -69,11 +65,13 @@
     }
 }
 
-.btn_contact{
-    font-size: 35px;
-}
+.coordonne{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
 
-.contact2{
-    width: 40%;
-    background-color: black;
+    button{
+        color: black;
+    }
 }

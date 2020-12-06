@@ -7,6 +7,7 @@
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
+    z-index: 2;
 }
 
 .intro_and_button_home{
@@ -32,23 +33,15 @@
         display: flex;
         justify-content: space-between;
 
-        a{
-            color: white;
-
-            &::before{
-                background-color: white;
-            }
-            &:hover{
-                color: black;
-            }
-        }
+        
     }
 }
 
 .scroll_down{
     height: 50px;
     width: 30px;
-    border: 2px solid white;
+    border: 3px solid white;
+
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

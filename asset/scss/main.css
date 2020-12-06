@@ -4,6 +4,7 @@ body {
           box-sizing: border-box;
   font-size: 16px;
   font-family: 'designer';
+  overflow-x: hidden;
 }
 
 ul {
@@ -90,8 +91,8 @@ a {
   opacity: 0;
   -webkit-filter: blur(0.5rem);
           filter: blur(0.5rem);
-  -webkit-animation: fill 0.5s ease-in-out forwards 1s;
-          animation: fill 0.5s ease-in-out forwards 1s;
+  -webkit-animation: fill 0.5s ease-in-out forwards 0.2s;
+          animation: fill 0.5s ease-in-out forwards 0.2s;
 }
 
 @-webkit-keyframes fill {
@@ -213,6 +214,7 @@ a {
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
+  z-index: 2;
 }
 
 .intro_and_button_home {
@@ -252,22 +254,10 @@ a {
           justify-content: space-between;
 }
 
-.intro_and_button_home .buttons_home a {
-  color: white;
-}
-
-.intro_and_button_home .buttons_home a::before {
-  background-color: white;
-}
-
-.intro_and_button_home .buttons_home a:hover {
-  color: black;
-}
-
 .scroll_down {
   height: 50px;
   width: 30px;
-  border: 2px solid white;
+  border: 3px solid white;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -383,19 +373,143 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.skills_list ul li {
-  position: relative;
-  margin: 15px 55px;
+.skills_list :nth-child(1) :nth-child(1) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.skills_list :nth-child(1) :nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.skills_list :nth-child(1) :nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.skills_list :nth-child(1) :nth-child(4) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.skills_list :nth-child(1) :nth-child(5) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.skills_list :nth-child(2) :nth-child(1) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.skills_list :nth-child(2) :nth-child(2) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.skills_list :nth-child(2) :nth-child(3) {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.skills_list :nth-child(2) :nth-child(4) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.skills_list :nth-child(3) :nth-child(1) {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+.skills_list :nth-child(3) :nth-child(2) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.skills_list :nth-child(3) :nth-child(3) {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+.skills_list :nth-child(3) :nth-child(4) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.skill {
+  margin: 10px 25px;
+  -webkit-transform: translateY(70%);
+          transform: translateY(70%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.skill li {
+  text-align: center;
+  opacity: 0;
+  font-weight: bold;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.skills_list ul li:hover {
-  opacity: 0.2;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.skill img:hover {
+  -webkit-animation: opacityImg 0.5s ease forwards;
+          animation: opacityImg 0.5s ease forwards;
+}
+
+.skill:hover {
+  -webkit-animation: transSkill 0.5s ease-in-out forwards;
+          animation: transSkill 0.5s ease-in-out forwards;
+}
+
+.skill:hover li {
+  -webkit-animation: opacityLi 0.5s ease forwards;
+          animation: opacityLi 0.5s ease forwards;
+}
+
+@-webkit-keyframes opacityImg {
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes opacityImg {
+  to {
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes opacityLi {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityLi {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes transSkill {
+  to {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+}
+
+@keyframes transSkill {
+  to {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
 }
 
 .marquee_back {
@@ -558,9 +672,11 @@ a {
 }
 
 #contact {
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #e5e7e9;
 }
 
 .contact {
@@ -577,37 +693,23 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 60%;
-}
-
-.coordonne {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
 }
 
 .intro_contact {
   position: relative;
   margin: 55px 0;
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 900;
 }
 
-.intro_contact::before {
-  content: "";
+.intro_contact::after {
   position: absolute;
-  width: 50%;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  width: 80%;
+  height: 5px;
+  top: 100%;
+  left: 4px;
   background: #1ABC9C;
-  margin: 55px 0;
 }
 
 .contact_form {
@@ -659,13 +761,19 @@ a {
   width: 45%;
 }
 
-.btn_contact {
-  font-size: 35px;
+.coordonne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
 }
 
-.contact2 {
-  width: 40%;
-  background-color: black;
+.coordonne button {
+  color: black;
 }
 
 .loader {
@@ -761,6 +869,7 @@ a {
 }
 
 .portfolio {
+  min-height: 80vh;
   padding: 40px 0;
 }
 
@@ -771,14 +880,14 @@ a {
 }
 
 .portfolio_content {
-  max-width: 1300px;
+  max-width: 620px;
   width: 80%;
   height: auto;
   margin: 30px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (400px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 400px);
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -789,8 +898,8 @@ a {
 
 .portfolio_content .card {
   position: relative;
-  height: 300px;
-  width: 400px;
+  height: 150px;
+  width: 300px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-perspective: 1000px;
@@ -860,11 +969,6 @@ a {
           transform: translateZ(100px);
 }
 
-.box .content_bx div:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .box .content_bx div a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -876,14 +980,244 @@ a {
   transition: 0.5s;
 }
 
+.border_right {
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(193%);
+          transform: translateX(193%);
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.header {
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-93%);
+          transform: translateX(-93%);
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.header .nav_header {
+  display: none;
+  margin-right: 100px;
+  opacity: 0;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header .nav_header a {
+  color: black;
+  font-size: 2rem;
+}
+
+.header .p_border_nav {
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  -webkit-transform: rotate(-90deg) translateX(8px) translateY(-15px);
+          transform: rotate(-90deg) translateX(8px) translateY(-15px);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.menu_burger {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 35px;
+  width: 30px;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 4;
+}
+
+.menu_burger:hover .trait {
+  width: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.trait {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 30px;
+  background-color: #1ABC9C;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 4;
+}
+
+.trait::after, .trait::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #1ABC9C;
+  z-index: 4;
+}
+
+.trait::after {
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
+  width: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.trait::before {
+  -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+  width: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header.change {
+  -webkit-transform: translateX(-10%) !important;
+          transform: translateX(-10%) !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav_header.change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transition: 2.2s;
+  transition: 2.2s;
+}
+
+.nav_header.change a {
+  position: relative;
+}
+
+.nav_header.change a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #1ABC9C;
+}
+
+.nav_header.change a::after :hover::after {
+  width: 200px;
+}
+
+.p_border_nav.change {
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu_burger.change {
+  right: 75% !important;
+}
+
+.menu_burger.change:hover .trait::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.menu_burger.change:hover .trait::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.menu_burger.change .trait {
+  height: 0;
+}
+
+.menu_burger.change .trait::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu_burger.change .trait::after :hover {
+  width: 35px;
+}
+
+.menu_burger.change .trait::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/***** Header *****/
+section {
+  -webkit-transition: 0.5ss;
+  transition: 0.5ss;
+}
+
+section.change {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 footer {
-  height: 50px;
-  background-color: #e5e7e9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  background-color: white;
+}
+
+.img_direction {
+  position: absolute;
+  right: 150px;
+}
+
+.img_back {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(rgba(0, 0, 0, 0.3)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url(../img/bureau2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/bureau2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+  width: 100%;
 }
 
 @font-face {

@@ -9,18 +9,39 @@
 @import 'partials/contact';
 @import 'partials/loader';
 @import 'partials/portfolio';
+@import 'partials/border_nav';
 
 html{
     scroll-behavior: smooth;
 }
-
-
-
-/***** Header *****/
-
+section{
+    transition: 0.5ss;
+}
+section.change{
+    filter: blur(5px);
+    transition: 0.5s;
+}
 footer{
-    height: 50px;
-    background-color: $color_secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: white;
+}
+
+.img_direction{
+    position: absolute;
+    right: 150px;
+
+}
+
+.img_back{
+    background:  linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url(../img/bureau2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+    width: 100%;
+
 }
 
 @font-face{
