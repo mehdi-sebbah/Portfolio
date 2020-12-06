@@ -44,7 +44,7 @@
         font-size: 0.8rem;
         font-weight: bold;
         color: white;
-        transition: 0.2s;
+        transition: 0.1s;
     }
     
 }
@@ -120,14 +120,15 @@
             width: 0;
             height: 3px;
             background-color: $color_bleu;
-            :hover::after{
-                width: 200px;
-            }
+            transition: 0.2s;
+            z-index: 5;
         }
-    }
-    
+        &:hover::after{
+            width: 75%;
+            transition: 0.2s;
+        }
+    }   
 }
-
 
 .p_border_nav.change{
     display: none;

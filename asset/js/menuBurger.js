@@ -9,7 +9,7 @@ console.log(menuBurger)
 
 menuBurger.addEventListener("mouseover", () => {
     textBorder.style.transform = 'rotate(0deg) translateY(-10px) translateX(-16px)';
-    textBorder.style.transition = "0.5s";
+    textBorder.style.transition = "0.1s";
     header.style.transform = 'translateX(-90%)';
     menuBurger.style.right = '3%';
 })

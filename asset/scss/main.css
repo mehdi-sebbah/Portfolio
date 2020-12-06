@@ -1041,8 +1041,8 @@ a {
   font-size: 0.8rem;
   font-weight: bold;
   color: white;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .menu_burger {
@@ -1128,10 +1128,15 @@ a {
   width: 0;
   height: 3px;
   background-color: #1ABC9C;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 5;
 }
 
-.nav_header.change a::after :hover::after {
-  width: 200px;
+.nav_header.change a:hover::after {
+  width: 75%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .p_border_nav.change {
