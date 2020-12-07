@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color_secondary;
 }
 
 .picture_profil{
@@ -23,7 +24,7 @@
     font-size: $size_title;
 
     h2{
-        font-size: 50px;
+        font-size: $size_title;
         font-weight: 600;
         margin: 10px 0 ;
     }

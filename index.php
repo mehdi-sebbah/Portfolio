@@ -8,11 +8,11 @@
 </div>
 <div class="header">
     <nav class="nav_header">
-        <a href="">Acceuil</a>
-        <a href="">Présentation</a>
-        <a href="">Compétences</a>
-        <a href="">Projets</a>
-        <a href="">Contact</a>
+        <a href="#">Acceuil</a>
+        <a href="#about_me">Présentation</a>
+        <a href="#skills">Compétences</a>
+        <a href="#portfolio">Projets</a>
+        <a href="#contact">Contact</a>
     </nav>
     <p class="p_border_nav">MENU</p>
     <div class="menu_burger">
@@ -20,7 +20,16 @@
     </div>
 </div>
 <div class="border_right">
+    <div class="social_footer">
+        <a href="https://twitter.com/sebbah" target="blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/mehdi-sebbah" target="blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mehdi-sebbah-2761101b8/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
 </div>
+<div class="border_top">
+    <p>mehdi / <span>SEBBAH</span></p>
+</div>
+<div class="border_bottom"></div>
 <section id="home" class="home">
     <p>Mehdi Sebbah,</p>
     <div class="intro_and_button_home">
@@ -28,7 +37,7 @@
             <p class="intro_dev">DÉVELOPPEUR <span class="span_web">WEB</span></p>
         </div>
         <div class="buttons_home">
-            <a href="index.php" class="button">CONTACT</a>
+            <a href="#contact" class="button">CONTACT</a>
             <a href="#portfolio" class="button">PROJETS</a>
         </div>
         <a href="#about_me">
@@ -41,7 +50,7 @@
 <section id="about_me" class="about_me">
     <?php require_once 'about_me.php' ?>
 </section>
-<section class="section_skills">
+<section id="skills" class="section_skills">
     <h2>COMPÉTENCES</h2>
     <p>(Front/Back/Outils)</p>
     <div class="skills">
@@ -133,7 +142,7 @@
                 <input type="Email" placeholder="EMAIL">
             </div>
             <input type="text" placeholder="SUJET">
-            <textarea name="" id="" placeholder="VOTRE MESSAGE" rows="4"></textarea>
+            <textarea name="" id="" placeholder="VOTRE MESSAGE" rows="8"></textarea>
             <div class="coordonne">
                 <div>
                     <p class="phone">+33 6 28 45 88 98</p>
@@ -145,5 +154,8 @@
         </form>
     </div>
 </section>
+<div class="arrow_up">
+    <img src="asset/img/arrow_up.png" alt="">
+</div>
 
 <?php include_once 'asset/footer.php' ?>

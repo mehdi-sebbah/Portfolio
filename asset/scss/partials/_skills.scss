@@ -106,7 +106,6 @@
     }
     
     &:hover{
-        animation: transSkill 0.5s ease-in-out forwards;
         li{
             animation: opacityLi 0.5s ease forwards;
         }
@@ -121,11 +120,5 @@
 @keyframes opacityLi{
     to{
         opacity: 1;
-    }
-}
-
-@keyframes transSkill{
-    to{
-        transform: translateY(-3px);
     }
 }

@@ -1,13 +1,16 @@
 
-$size_title : 3rem;
+$size_title : clamp(20px, 5vw, 50px);
 $size_text : 1.3rem;
 $size_text_btn : 1.6rem;
 
-$color_secondary : rgb(229, 231, 233);
+$color_secondary : rgb(242, 243, 244);
 $color_bleu : #1ABC9C;
 
 $padding_btn : 10px 25px;
 
 $spartan : 'designer';
+
+$min_width: 260px;
+$max_width: 1900px;
 
 

@@ -1,6 +1,8 @@
 .portfolio{
     min-height: 80vh;
     padding: 40px 0;
+    background-color: $color_secondary;
+
     h2{
         text-align: center;
         font-size: $size_title;
@@ -11,11 +13,12 @@
 .portfolio_content{
     max-width: 620px;
     width: 80%;
-    height: auto;
-    margin: 30px auto;
+    height: 80vh;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    justify-content: center;
+    justify-self: center;
+    align-items: center;
     grid-gap: 20px;
     transform-style: preserve-3d;
 
@@ -39,9 +42,7 @@
     height: 100%;
     width: 100%;
     transform-style: preserve-3d;
-    transition: 1s ease;
-    
-
+    transition: 0.5s ease-in-out;
     
     .imgBx{
         height: 100%;
@@ -60,7 +61,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background: $color_secondary;
+            background: rgba(255,255,255,0.8);
             backface-visibility: hidden;
             display: flex;
             justify-content: center;

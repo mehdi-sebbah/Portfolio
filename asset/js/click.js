@@ -1,13 +1,11 @@
-const textSkills = document.querySelector(".text_skills");
-const btnSkill = document.querySelector("#btn_skills");
-const skills = document.querySelectorAll(".skills ul li");
-function changeSkills(skill){
-    skill.style.opacity = '1';
-    skill.style.transform = 'none';
-}
+const arrow_up = document.querySelector('.arrow_up');
 
-btnSkill.addEventListener('click', (e) => {
-    textSkills.style.opacity = '1';
-    textSkills.style.transform = 'none';
-    skills.forEach(changeSkills);
+//EVENT ARROW UP FOR SCROLL AT THE HOME PAGE
+
+arrow_up.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        left:0,
+        behavior: "smooth",
+    })
 })

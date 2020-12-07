@@ -10,13 +10,14 @@ console.log(menuBurger)
 menuBurger.addEventListener("mouseover", () => {
     textBorder.style.transform = 'rotate(0deg) translateY(-10px) translateX(-16px)';
     textBorder.style.transition = "0.1s";
-    header.style.transform = 'translateX(-90%)';
-    menuBurger.style.right = '3%';
+    header.style.left = '60px';
+    menuBurger.style.right = '20px';
+
 })
 menuBurger.addEventListener("mouseout", () => {
     textBorder.style.transform = 'rotate(-90deg) translateX(8px) translateY(-15px)';
     textBorder.style.right = "-70px";
-   header.style.transform = 'translateX(-93%)';
+    header.style.left = '40px';
     menuBurger.style.right = '0';
 })
 
