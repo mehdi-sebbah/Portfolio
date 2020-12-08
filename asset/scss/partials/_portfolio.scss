@@ -1,24 +1,22 @@
 .portfolio{
-    min-height: 80vh;
+    min-height: 70vh;
     padding: 40px 0;
     background-color: $color_secondary;
 
     h2{
         text-align: center;
         font-size: $size_title;
-        margin-top: 0;
+        margin-bottom: 100px;
     }
 }
 
 .portfolio_content{
     max-width: 620px;
     width: 80%;
-    height: 80vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    justify-self: center;
-    align-items: center;
+    justify-content: center;
     grid-gap: 20px;
     transform-style: preserve-3d;
 

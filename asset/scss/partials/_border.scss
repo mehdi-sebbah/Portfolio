@@ -61,7 +61,9 @@
     background: white;
     z-index: 4;
 }
-
+.header_mobile{
+    display: none;
+}
 .header{
     position: fixed;
     height: 100vh;
@@ -193,18 +195,41 @@
 
 .menu_burger.change{
     right: 25px !important;
-
-
+    &:hover{
+        .trait::after{
+            transform: rotate(90deg);
+            background-color: black;
+            transition: 0.5s;
+        }
+        .trait::before{
+            transform: rotate(0);
+            background-color: black;
+            transition: 0.5s;
+        }
+    }
     .trait{
         height: 0;
         &::after{
             transform:rotate(45deg);
-            :hover{
-                width: 35px;
-            }
         }
+       
         &::before{
             transform:rotate(-45deg);
         }
     }
+}
+
+.border_right.change{
+    width: 200px;
+    transition: 0.5s;
+}
+
+.border_top.change{
+    height: 75px;
+    transition: 0.5s;
+}
+
+.border_bottom.change{
+    height: 75px;
+    transition: 0.5s;
 }

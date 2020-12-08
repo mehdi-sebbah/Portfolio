@@ -21,10 +21,9 @@
     height: 100%;
     width: 600px;
     transform: translate(-75px, -80px);
-    font-size: $size_title;
 
     h2{
-        font-size: $size_title;
+        font-size: clamp(20px, 4vw, 50px);
         font-weight: 600;
         margin: 10px 0 ;
     }
@@ -43,11 +42,11 @@
     transform: translateY(50px);
 
     max-width: 600px;
-    font-size: $size_text;
     line-height: 2.2rem;
     transition: 1s ease-in-out;
     p{
         color: black;
+        font-size: $size_text;
     }
 }
 

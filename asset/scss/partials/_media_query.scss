@@ -1,5 +1,182 @@
 @media screen and (max-width: 840px){
+
+
+//HEADER//
+
+.header{
+    display: none;
+}
+
+.header_mobile{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 40px;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: white;
+    transition: 0.5s;
+    z-index: 3;
+
+    .nav_header_mobile{
+        display: none;
+        margin-right: 100px;
+        opacity: 0;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        transition: 0.2s;
+        a{
+            color: black;
+            font-size: 2rem;
+        }
+    }
+
+    .name_header{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 0.8rem;
+        font-weight: bold;
+
+        span{
+            color: $color_bleu;
+        }
+    }
+}
+
+.menu_burger_mobile{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    height: 35px;
+    width: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 5;
+
+    .trait_mobile{
+        content: "";
+        position: absolute;
+        top: 50%;
+    
+        height: 2px;
+        width: 20px;
+        background-color: $color_bleu;
+        transition: 0.3s;
+        z-index: 4;
+    
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: $color_bleu;
+            z-index: 4;
+        }
+    
+        &::after{
+            transform: translateY(9px);
+            width: 30px;
+            transition: 0.5s;
+        }
+    
+        &::before{
+            transform: translateY(-9px);
+            width: 25px;
+            transition: 0.5s;
+        }
+    
+    }
+}
+
+.border_bottom{
+    display: none;
+}
+
+.border_top{
+    display: none;
+}
+
+.border_right{
+    display: none;
+}
+//changer via js//
+
+
+
+//PARTIE HOME//
+
+.home{
+    background-size: cover;
+}
+
+.button{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 30px 10px 10px 10px;
+    &:hover::before{
+        width: 0;
+    }
+}
+
+//PARTIE ABOUT_ME//
+
+.about_me{
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+
+.picture_profil{
+    img{
+        margin-bottom: 20px;
+        width: 175px;
+        border-radius: 66%;
+    }
+}
+
+.content_about_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.about_me_title{
+    height: auto;
+    width: 85%;
+    transform: none;
+
+    h2{
+        display: flex;
+       flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .content_bottom_title{
+        width: 45%;
+        transform: translateX(106%);
+        margin: 0;
+    }
+
+}
+.about_me_text{
+    line-height: 2rem;
+    width: 85%;
+    text-align: center;
+}
+
+//PARTIE CONTACT//
+
+    .contact{
+        margin: 45px;
+    }
     .contact_form{
+        width: 100%;
         textarea{
             margin-bottom: 0;
         }

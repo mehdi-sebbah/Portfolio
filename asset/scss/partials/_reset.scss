@@ -1,4 +1,6 @@
 
+html{width: 100vw;}
+
 body{
     margin: 0;
     box-sizing: border-box;
@@ -24,6 +26,9 @@ p{
 
 h1,h2,h3,h4,h5{
     color: black;
+}
+h2{
+    margin-top: 50px;
 }
 a{
     text-decoration: none;

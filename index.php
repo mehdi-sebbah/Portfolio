@@ -6,6 +6,19 @@
         <div class="bounce"></div>
     </div>
 </div>
+<div class="header_mobile">
+    <nav class="nav_header_mobile">
+        <a href="#">Acceuil</a>
+        <a href="#about_me">Présentation</a>
+        <a href="#skills">Compétences</a>
+        <a href="#portfolio">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu_burger_mobile">
+        <span class="trait_mobile"></span>
+    </div>
+    <p class="name_header">mehdi / <span>SEBBAH</span></p>
+</div>
 <div class="header">
     <nav class="nav_header">
         <a href="#">Acceuil</a>
@@ -31,10 +44,10 @@
 </div>
 <div class="border_bottom"></div>
 <section id="home" class="home">
-    <p>Mehdi Sebbah,</p>
     <div class="intro_and_button_home">
-        <div class="intro">
-            <p class="intro_dev">DÉVELOPPEUR <span class="span_web">WEB</span></p>
+        <div class="content_title">
+            <h1 class="title_home">MEHDI </h1>
+            <span> SEBBAH</span>
         </div>
         <div class="buttons_home">
             <a href="#contact" class="button">CONTACT</a>
