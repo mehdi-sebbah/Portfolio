@@ -59,7 +59,6 @@
     </div>
 
 </section>
-<div class="content_void"></div>
 <section id="about_me" class="about_me">
     <?php require_once 'about_me.php' ?>
 </section>
@@ -150,20 +149,38 @@
     <div class="contact">
         <h2 class="intro_contact">CONTACT</h2>
         <form method="POST" action="contact.php" class="contact_form">
-            <div class="info_sender">
-                <input type="text" placeholder="NOM">
-                <input type="Email" placeholder="EMAIL">
-            </div>
-            <input type="text" placeholder="SUJET">
-            <textarea name="" id="" placeholder="VOTRE MESSAGE" rows="8"></textarea>
-            <div class="coordonne">
-                <div>
-                    <p class="phone">+33 6 28 45 88 98</p>
-                    <p class="email">sebbah.m.dev@gmail.com</p>
+            <div class="form">
+                <div class="info_sender">
+                    <div class="input_name">
+                        <input type="text" name="name" required>
+                        <label for="name">NOM</label>
+                    </div>
+                    <div class="input_email">
+                        <input type="Email" name="email" required>
+                        <label for="email" >EMAIL</label>
+                    </div>
                 </div>
-                <button class="button" type="submit">ENVOYER</button>
+                <div class="input_sujet">
+                    <input type="text" name="sujet" required>
+                    <label for="sujet">SUJET</label>
+                </div>
+                <div class="textarea_message">
+                    <textarea name="message" id="" rows="8" required></textarea>
+                    <label for="message">message</label>
+                </div>
+                <div class="coordonne">
+                    <div>
+                        <p class="phone">+33 6 28 45 88 98</p>
+                        <p class="email">sebbah.m.dev@gmail.com</p>
+                        <div class="logo_contact">
+                            <a href="https://twitter.com/sebbah" target="blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/mehdi-sebbah" target="blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mehdi-sebbah-2761101b8/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <button class="button" type="submit">ENVOYER</button>
+                </div>
             </div>
-
         </form>
     </div>
 </section>

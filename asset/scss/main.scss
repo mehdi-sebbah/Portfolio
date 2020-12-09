@@ -21,6 +21,9 @@ section{
 section.change{
     filter: blur(5px);
     transition: 0.5s;
+    :hover{
+        cursor: url('../img/annuler.png') 4 4, auto;
+    }
 }
 footer{
     display: flex;

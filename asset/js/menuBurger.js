@@ -1,5 +1,7 @@
 const header = document.querySelector('.header');
+const headerMobile = document.querySelector('.header_mobile');
 const headerNav = document.querySelector('.nav_header');
+const linkHeaderNav = document.querySelectorAll('.nav_header a, .nav_header_mobile a');
 const menuBurger = document.querySelector('.menu_burger');
 const menuBurgerMobile = document.querySelector('.menu_burger_mobile');
 const traitAfter = document.querySelector('.trait::after');
@@ -8,8 +10,7 @@ const sections = document.querySelectorAll('section');
 const borderRight = document.querySelector('.border_right');
 const borderTop = document.querySelector('.border_top');
 const borderBottom = document.querySelector('.border_bottom');
-console.log(menuBurger)
-
+const nameHeader = document.querySelector('.name_header')
 
 menuBurger.addEventListener("mouseover", () => {
     textBorder.style.transform = 'rotate(0deg) translateY(-10px) translateX(-16px)';
@@ -32,6 +33,7 @@ menuBurgerMobile.addEventListener("mouseout", () => {
 
 })
 
+
 menuBurger.addEventListener("click", () => {
     textBorder.classList.toggle("change");
     menuBurger.classList.toggle("change");
@@ -42,6 +44,41 @@ menuBurger.addEventListener("click", () => {
     borderTop.classList.toggle("change");
     borderBottom.classList.toggle("change");
 })
+
+linkHeaderNav.forEach(link => link.addEventListener("click", () => {
+    textBorder.classList.remove("change");
+    menuBurger.classList.remove("change");
+    header.classList.remove("change");
+    sections.forEach(section => section.classList.remove("change"))
+    headerNav.classList.remove("change");
+    borderRight.classList.remove("change");
+    borderTop.classList.remove("change");
+    borderBottom.classList.remove("change");
+}))
+
+
+sections.forEach(section => section.addEventListener("click", () => {
+    textBorder.classList.remove("change");
+    menuBurger.classList.remove("change");
+    header.classList.remove("change");
+    sections.forEach(section => section.classList.remove("change"))
+    headerNav.classList.remove("change");
+    borderRight.classList.remove("change");
+    borderTop.classList.remove("change");
+    borderBottom.classList.remove("change");
+}))
+
+menuBurgerMobile.addEventListener("click", () => {
+    headerMobile.classList.toggle("change");
+    menuBurgerMobile.classList.toggle("change");
+    nameHeader.classList.toggle("change");
+})
+
+linkHeaderNav.forEach(link => link.addEventListener("click", () => {
+    headerMobile.classList.remove("change");
+    menuBurgerMobile.classList.remove("change");
+    nameHeader.classList.remove("change");
+}))
 
 window.addEventListener('scroll', () => {
     let scrollValue = (window.innerHeight + window.scrollY) / document.body.offsetHeight;

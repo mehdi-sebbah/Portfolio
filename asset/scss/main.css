@@ -40,6 +40,14 @@ a {
   color: white;
 }
 
+input:focus {
+  outline: unset;
+}
+
+textarea:focus {
+  outline: unset;
+}
+
 .intro p {
   font-family: "designer";
   font-weight: 300;
@@ -83,7 +91,7 @@ a {
 }
 
 .button:hover {
-  color: black;
+  color: #1ABC9C;
   border: hidden;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -250,7 +258,7 @@ a {
 
 .intro_and_button_home .content_title .title_home {
   font-family: 'designer';
-  font-size: clamp(50px, 7vw, 130px);
+  font-size: clamp(40px, 7vw, 130px);
   margin: 0;
   color: white;
   font-weight: lighter;
@@ -258,7 +266,7 @@ a {
 
 .intro_and_button_home .content_title span {
   font-weight: bold;
-  font-size: clamp(50px, 7vw, 130px);
+  font-size: clamp(40px, 7vw, 130px);
   color: #1ABC9C;
 }
 
@@ -348,6 +356,16 @@ a {
   text-align: center;
   font-size: clamp(37px, 4vw, 70px);
   margin-bottom: 5px;
+}
+
+.section_skills h2::after {
+  content: "";
+  display: block;
+  margin: 15px auto 50px auto;
+  text-align: center;
+  width: 13%;
+  height: 3px;
+  background: #1ABC9C;
 }
 
 .section_skills p {
@@ -691,26 +709,36 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  margin: 100px;
+  margin: 50px  0 100px 0;
 }
 
 .intro_contact {
   position: relative;
-  margin: 55px 0;
+  margin: 10px 0;
   font-size: clamp(37px, 4vw, 70px);
   font-weight: 900;
 }
 
 .intro_contact::after {
-  position: absolute;
-  width: 80%;
-  height: 5px;
-  top: 100%;
-  left: 4px;
+  content: "";
+  display: block;
+  margin: 15px auto 50px auto;
+  text-align: center;
+  width: 50%;
+  height: 3px;
   background: #1ABC9C;
 }
 
 .contact_form {
+  width: 50%;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,28 +752,41 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 50%;
-  border-radius: 5px;
-  padding: 10px;
 }
 
-.contact_form input {
+.form input {
   width: 100%;
-  margin: 20px 0;
+  margin: 5px 0 20px 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1.5px solid black;
+  font-size: 1.2rem;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
-.contact_form textarea {
+.form textarea {
   width: 100%;
   margin: 40px 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1.5px solid black;
+  font-size: 1.2rem;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.form label {
+  position: absolute;
+  font-weight: bold;
+  top: 7px;
+  left: 10px;
+  opacity: 0.4;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .info_sender {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -755,8 +796,62 @@ a {
           justify-content: space-between;
 }
 
-.info_sender input {
+.info_sender .input_name, .info_sender .input_email {
+  position: relative;
   width: 45%;
+}
+
+.info_sender .input_name input:focus ~ label, .info_sender .input_name input:valid ~ label, .info_sender .input_email input:focus ~ label, .info_sender .input_email input:valid ~ label {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  font-size: 15px;
+  color: #1ABC9C;
+  opacity: 1;
+}
+
+.info_sender .input_name input:valid, .info_sender .input_email input:valid {
+  border-bottom: 2px solid #1ABC9C;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.info_sender .input_name input:focus:invalid, .info_sender .input_email input:focus:invalid {
+  border-bottom: 2px solid #CB4335;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.input_sujet, .textarea_message {
+  position: relative;
+  width: 100%;
+}
+
+.input_sujet input:focus ~ label, .input_sujet textarea:focus ~ label, .input_sujet input:valid ~ label, .input_sujet textarea:valid ~ label, .textarea_message input:focus ~ label, .textarea_message textarea:focus ~ label, .textarea_message input:valid ~ label, .textarea_message textarea:valid ~ label {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  color: #1ABC9C;
+  opacity: 1;
+}
+
+.input_sujet textarea:focus ~ label, .input_sujet textarea:valid ~ label, .textarea_message textarea:focus ~ label, .textarea_message textarea:valid ~ label {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.input_sujet input:valid, .input_sujet textarea:valid, .textarea_message input:valid, .textarea_message textarea:valid {
+  border-bottom: 2px solid #1ABC9C;
+}
+
+.input_sujet input:focus:invalid, .input_sujet textarea:focus:invalid, .textarea_message input:focus:invalid, .textarea_message textarea:focus:invalid {
+  border-bottom: 2px solid #CB4335;
+}
+
+.input_sujet {
+  margin: 20px 0 70px 0;
+}
+
+.textarea_message label {
+  top: 46px;
 }
 
 .coordonne {
@@ -770,8 +865,29 @@ a {
   font-weight: 600;
 }
 
+.coordonne div .email {
+  color: #1ABC9C;
+}
+
 .coordonne button {
+  background-color: #1ABC9C;
+}
+
+.coordonne button:hover {
   color: black;
+}
+
+.coordonne button::before {
+  height: 0;
+}
+
+.coordonne button:hover::before {
+  color: white;
+  background-color: transparent;
+}
+
+.logo_contact {
+  display: none;
 }
 
 .loader {
@@ -873,9 +989,21 @@ a {
 }
 
 .portfolio h2 {
+  position: relative;
+  height: auto;
   text-align: center;
   font-size: clamp(37px, 4vw, 70px);
   margin-bottom: 100px;
+}
+
+.portfolio h2::after {
+  content: "";
+  display: block;
+  margin: 15px auto 50px auto;
+  text-align: center;
+  width: 13%;
+  height: 3px;
+  background: #1ABC9C;
 }
 
 .portfolio_content {
@@ -991,6 +1119,8 @@ a {
   height: 40px;
   width: 100%;
   background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 3;
 }
 
@@ -998,6 +1128,8 @@ a {
   font-size: 0.8rem;
   margin-left: 35px;
   font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .border_top p span {
@@ -1026,7 +1158,7 @@ a {
 }
 
 .border_right .social_footer {
-  height: 120px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,13 +1169,16 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .border_right .social_footer a {
   font-size: 18px;
   color: black;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  padding: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .border_right .social_footer a :hover {
@@ -1059,6 +1194,8 @@ a {
   height: 40px;
   width: 100%;
   background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 4;
 }
 
@@ -1175,8 +1312,8 @@ a {
 }
 
 .header.change {
-  -webkit-transform: translateX(-10%) !important;
-          transform: translateX(-10%) !important;
+  -webkit-transform: translateX(-20%) !important;
+          transform: translateX(-20%) !important;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   left: 0 !important;
@@ -1228,16 +1365,16 @@ a {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   background-color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .menu_burger.change:hover .trait::before {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   background-color: black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .menu_burger.change .trait {
@@ -1260,8 +1397,27 @@ a {
   transition: 0.5s;
 }
 
+.border_right.change .social_footer {
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.border_right.change .social_footer a {
+  font-size: 35px;
+  margin: 15px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .border_top.change {
   height: 75px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.border_top.change p {
+  font-size: 1rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1291,9 +1447,9 @@ a {
     z-index: 3;
   }
   .header_mobile .nav_header_mobile {
-    display: none;
-    margin-right: 100px;
-    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1302,15 +1458,17 @@ a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
   .header_mobile .nav_header_mobile a {
-    color: black;
+    color: #1ABC9C;
     font-size: 2rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .header_mobile .name_header {
     position: absolute;
@@ -1325,9 +1483,9 @@ a {
   .menu_burger_mobile {
     position: absolute;
     bottom: 5px;
-    right: 15px;
+    right: 30px;
     height: 35px;
-    width: 30px;
+    width: 35px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     cursor: pointer;
@@ -1374,17 +1532,46 @@ a {
   .border_right {
     display: none;
   }
+  .header_mobile.change {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 0;
+    z-index: 21;
+  }
+  .menu_burger_mobile.change {
+    top: 20px;
+    right: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .menu_burger_mobile.change span {
+    width: 0;
+  }
+  .menu_burger_mobile.change span::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 30px;
+  }
+  .menu_burger_mobile.change span::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .name_header.change {
+    display: none;
+  }
   .home {
     background-size: cover;
   }
   .button {
     background-color: white;
+    border-radius: 24px;
     color: black;
     padding: 10px;
     margin: 30px 10px 10px 10px;
   }
   .button:hover::before {
     width: 0;
+    color: black;
   }
   .about_me {
     -webkit-box-orient: vertical;
@@ -1414,12 +1601,12 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
     margin: 0;
   }
   .about_me_title {
     height: auto;
     width: 85%;
+    padding-bottom: 10px;
     -webkit-transform: none;
             transform: none;
   }
@@ -1446,7 +1633,7 @@ a {
     margin: 45px;
   }
   .contact_form {
-    width: 100%;
+    width: 85%;
   }
   .contact_form textarea {
     margin-bottom: 0;
@@ -1465,7 +1652,7 @@ a {
     margin: 15px 0;
   }
   .coordonne button {
-    background-color: white;
+    background-color: #f2f3f4;
     margin: 0 0 25px 0;
   }
   .coordonne button::before {
@@ -1476,6 +1663,28 @@ a {
   }
   .email {
     text-align: center;
+  }
+  .logo_contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+  }
+  .logo_contact a {
+    font-size: 30px;
+    color: black;
+  }
+  #skills {
+    background-color: white;
+  }
+  #contact {
+    background-color: white;
   }
 }
 
@@ -1493,6 +1702,10 @@ section.change {
           filter: blur(5px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+section.change :hover {
+  cursor: url("../img/annuler.png") 4 4, auto;
 }
 
 footer {

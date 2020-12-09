@@ -36,3 +36,11 @@ a{
     color: white;
 }
 
+input:focus{
+    outline: unset;
+}
+
+textarea:focus{
+    outline: unset;
+}
+

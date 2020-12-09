@@ -3,9 +3,20 @@
     margin: 0 auto;
     background-color:$color_secondary;
     h2{
+        
         text-align: center;
         font-size: $size_title;
         margin-bottom: 5px;
+        &::after{
+            content: "";
+            display: block;
+            margin: 15px auto 50px auto;
+            text-align: center;
+            width: 13%;
+            height: 3px;
+            background: $color_bleu;
+     
+        } 
     }
     p{
         text-align: center;

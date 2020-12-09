@@ -7,12 +7,14 @@
     height: 40px;
     width: 100%;
     background: white;
+    transition: 0.5s;
     z-index: 3;
 
     p{
         font-size: 0.8rem;
         margin-left: 35px;
         font-weight: bold;
+        transition: 0.5s;
 
         span{
             color: $color_bleu;
@@ -34,15 +36,17 @@
     z-index: 3;
 
     .social_footer{
-        height: 120px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: 0.5s;
 
         a{
            font-size: 18px;
             color: black;
-            transition: 0.2s;
+            padding: 15px;
+            transition: all 0.5s;
 
             :hover{
                 color: $color_bleu;
@@ -59,6 +63,7 @@
     height: 40px;
     width: 100%;
     background: white;
+    transition: 0.5s;
     z-index: 4;
 }
 .header_mobile{
@@ -158,7 +163,7 @@
 /// CHANGE ACTIVÉ VIA JS ///
 
 .header.change{
-    transform: translateX(-10%) !important;
+    transform: translateX(-20%) !important;
     transition: 0.5s;
     left: 0 !important;
 }
@@ -199,12 +204,12 @@
         .trait::after{
             transform: rotate(90deg);
             background-color: black;
-            transition: 0.5s;
+            transition: 0.2s;
         }
         .trait::before{
             transform: rotate(0);
             background-color: black;
-            transition: 0.5s;
+            transition: 0.2s;
         }
     }
     .trait{
@@ -222,11 +227,25 @@
 .border_right.change{
     width: 200px;
     transition: 0.5s;
+
+    .social_footer{
+        height: auto;
+        transition: 0.5s;
+        a{
+            font-size: 35px;
+            margin: 15px 0;
+            transition: 0.5s;
+        }
+    }
 }
 
 .border_top.change{
     height: 75px;
     transition: 0.5s;
+    p{
+        font-size: 1rem;
+        transition: 0.5s;
+    }
 }
 
 .border_bottom.change{

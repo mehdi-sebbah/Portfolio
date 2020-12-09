@@ -22,14 +22,14 @@
         display: flex;
         .title_home{
             font-family: 'designer';
-            font-size: clamp(50px, 7vw, 130px);
+            font-size: clamp(40px, 7vw, 130px);
             margin: 0;
             color: white;
             font-weight: lighter;
         }
         span{
             font-weight: bold;
-            font-size: clamp(50px, 7vw, 130px);
+            font-size: clamp(40px, 7vw, 130px);
             color: $color_bleu;
         }
     }
