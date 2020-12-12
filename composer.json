@@ -1,4 +1,12 @@
 {
+    "name": "sebbah/portfolio",
+    "description": "Portfolio",
+    "authors": [
+        {
+            "name": "Mehdi Sebbah",
+            "email": "sebbah.m.dev@gmail.com"
+        }
+    ],
     "require": {
         "swiftmailer/swiftmailer": "^6.0"
     }

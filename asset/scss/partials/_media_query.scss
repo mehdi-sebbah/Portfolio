@@ -149,15 +149,17 @@
 //PARTIE ABOUT_ME//
 
 .about_me{
+    padding-top: 40px;
+    height: auto;
     flex-direction: column-reverse;
     justify-content: space-evenly;
 }
 
 .picture_profil{
     img{
-        margin-bottom: 20px;
+        margin: 20px 0;
         width: 175px;
-        border-radius: 66%;
+        border-radius: 5%;
     }
 }
 
@@ -189,6 +191,7 @@
 
 }
 .about_me_text{
+    margin-top: 40px;
     line-height: 2rem;
     width: 85%;
     text-align: center;
@@ -213,9 +216,8 @@
         margin: 15px 0;
 
         button{
-            background-color: $color_secondary;
             margin: 0 0 25px 0;
-
+            color: white;
             &::before{
                 content: none;
             }
@@ -245,6 +247,20 @@
     #contact{
         background-color: white;
 
+    }
+}
+
+@media screen and (max-height: 773px){
+    .input_sujet{
+        margin-bottom: 10px;
+    }
+
+    .nav_header.change{
+        justify-content: center;
+        a{
+            margin: 25px 0;
+            font-size: 1.5rem;
+        }
     }
 }
 

@@ -5,7 +5,6 @@
 @import 'partials/about_me';
 @import 'partials/home';
 @import 'partials/skills';
-@import 'partials/svg_stack';
 @import 'partials/contact';
 @import 'partials/loader';
 @import 'partials/portfolio';
@@ -34,12 +33,11 @@ footer{
 }
 
 .img_back{
-    background:  linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url(../img/bureau2.jpg);
+    background:  linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bureau2.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 350px;
     width: 100%;
-
 }
 
 .arrow_up{

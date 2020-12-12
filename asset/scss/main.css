@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 a {
@@ -46,6 +46,22 @@ input:focus {
 
 textarea:focus {
   outline: unset;
+}
+
+.section_skills h2, .contact h2, .portfolio h2 {
+  text-align: center;
+  font-size: clamp(37px, 4vw, 70px);
+  margin-bottom: 5px;
+}
+
+.section_skills h2::after, .contact h2::after, .portfolio h2::after {
+  content: "";
+  display: block;
+  margin: 15px auto 50px auto;
+  text-align: center;
+  width: 13%;
+  height: 3px;
+  background: #1ABC9C;
 }
 
 .intro p {
@@ -185,42 +201,6 @@ textarea:focus {
   font-size: clamp(0.95em, 2vw, 1.3rem);
 }
 
-/*
-.skills{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 500px;
-    font-size: 1.5rem;
-    line-height:4rem;
-
-    ul li:nth-child(1){
-        opacity: 0;
-        transform: translateX(-20%);
-        transition: all 0.5s ease-in-out 1s; 
-    }
-    ul li:nth-child(2){
-        opacity: 0;
-        transform: translateX(-20%);
-        transition: all 0.5s ease-in-out 1.1s; 
-    }
-    ul li:nth-child(3){
-        opacity: 0;
-        transform: translateX(-20%);
-        transition: all 0.5s ease-in-out 1.2s; 
-    }
-    ul li:nth-child(4){
-        opacity: 0;
-        transform: translateX(-20%);
-        transition: all 0.5s ease-in-out 1.3s; 
-    }
-    ul li:nth-child(5){
-        opacity: 0;
-        transform: translateX(-20%);
-        transition: all 0.5s ease-in-out 1.4s; 
-    }
-
-}*/
 .home {
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), color-stop(rgba(0, 0, 0, 0.5)), color-stop(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1))), url("../../asset/img/back.jpg");
@@ -229,12 +209,10 @@ textarea:focus {
   background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 2;
 }
 
 .intro_and_button_home {
   height: 100%;
-  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,22 +330,6 @@ textarea:focus {
   background-color: #f2f3f4;
 }
 
-.section_skills h2 {
-  text-align: center;
-  font-size: clamp(37px, 4vw, 70px);
-  margin-bottom: 5px;
-}
-
-.section_skills h2::after {
-  content: "";
-  display: block;
-  margin: 15px auto 50px auto;
-  text-align: center;
-  width: 13%;
-  height: 3px;
-  background: #1ABC9C;
-}
-
 .section_skills p {
   text-align: center;
   font-weight: 600;
@@ -384,6 +346,8 @@ textarea:focus {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 50px;
+  background-color: white;
   height: 100%;
 }
 
@@ -522,165 +486,6 @@ textarea:focus {
   }
 }
 
-.marquee_back {
-  opacity: 0;
-  line-height: unset;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-animation: opacMarquee 3s ease forwards;
-          animation: opacMarquee 3s ease forwards;
-}
-
-.marquee_back div {
-  font-size: 2rem;
-  font-weight: 700;
-  white-space: nowrap;
-  -webkit-animation: animateBack 40s linear infinite;
-          animation: animateBack 40s linear infinite;
-  -webkit-animation-delay: -40s;
-          animation-delay: -40s;
-}
-
-.marquee_back div:nth-child(2) {
-  -webkit-animation: animateBack2 40s linear infinite;
-          animation: animateBack2 40s linear infinite;
-  -webkit-animation-delay: -20s;
-          animation-delay: -20s;
-}
-
-.marquee_front {
-  opacity: 0;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.4);
-  -webkit-animation: opacMarquee 3s ease forwards 2s;
-          animation: opacMarquee 3s ease forwards 2s;
-}
-
-.marquee_front div {
-  font-size: 2rem;
-  font-weight: 400;
-  white-space: nowrap;
-  -webkit-animation: animateFront 60s linear infinite;
-          animation: animateFront 60s linear infinite;
-  -webkit-animation-delay: -60s;
-          animation-delay: -60s;
-}
-
-.marquee_front div:nth-child(2) {
-  -webkit-animation: animateFront2 60s linear infinite;
-          animation: animateFront2 60s linear infinite;
-  -webkit-animation-delay: -30s;
-          animation-delay: -30s;
-}
-
-@-webkit-keyframes animateBack {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@keyframes animateBack {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes animateBack2 {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-}
-
-@keyframes animateBack2 {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-}
-
-@-webkit-keyframes animateFront {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
-@keyframes animateFront {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
-@-webkit-keyframes animateFront2 {
-  0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes animateFront2 {
-  0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes opacMarquee {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacMarquee {
-  to {
-    opacity: 1;
-  }
-}
-
 #contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,21 +517,8 @@ textarea:focus {
   margin: 50px  0 100px 0;
 }
 
-.intro_contact {
-  position: relative;
-  margin: 10px 0;
-  font-size: clamp(37px, 4vw, 70px);
-  font-weight: 900;
-}
-
-.intro_contact::after {
-  content: "";
-  display: block;
-  margin: 15px auto 50px auto;
-  text-align: center;
+.contact h2 {
   width: 50%;
-  height: 3px;
-  background: #1ABC9C;
 }
 
 .contact_form {
@@ -760,18 +552,16 @@ textarea:focus {
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  border: 2px solid grey;
-  border-radius: 5px;
+  border-bottom: 2px solid grey;
 }
 
 .form textarea {
   width: 100%;
-  margin: 40px 0;
+  margin: 10px 0;
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  border: 2px solid grey;
-  border-radius: 5px;
+  border-bottom: 2px solid grey;
 }
 
 .form label {
@@ -834,24 +624,30 @@ textarea:focus {
 }
 
 .input_sujet textarea:focus ~ label, .input_sujet textarea:valid ~ label, .textarea_message textarea:focus ~ label, .textarea_message textarea:valid ~ label {
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
-.input_sujet input:valid, .input_sujet textarea:valid, .textarea_message input:valid, .textarea_message textarea:valid {
+.input_sujet input:focus:valid, .textarea_message input:focus:valid {
   border-bottom: 2px solid #1ABC9C;
 }
 
-.input_sujet input:focus:invalid, .input_sujet textarea:focus:invalid, .textarea_message input:focus:invalid, .textarea_message textarea:focus:invalid {
+.input_sujet textarea:focus:valid, .textarea_message textarea:focus:valid {
+  border: 2px solid #1ABC9C;
+  border-radius: 5px;
+}
+
+.input_sujet input:focus:invalid, .textarea_message input:focus:invalid {
   border-bottom: 2px solid #CB4335;
 }
 
-.input_sujet {
-  margin: 20px 0 70px 0;
+.input_sujet textarea:focus:invalid, .textarea_message textarea:focus:invalid {
+  border: 2px solid #CB4335;
+  border-radius: 5px;
 }
 
-.textarea_message label {
-  top: 46px;
+.input_sujet {
+  margin: 20px 0 50px 0;
 }
 
 .coordonne {
@@ -986,24 +782,6 @@ textarea:focus {
   min-height: 70vh;
   padding: 40px 0;
   background-color: #f2f3f4;
-}
-
-.portfolio h2 {
-  position: relative;
-  height: auto;
-  text-align: center;
-  font-size: clamp(37px, 4vw, 70px);
-  margin-bottom: 100px;
-}
-
-.portfolio h2::after {
-  content: "";
-  display: block;
-  margin: 15px auto 50px auto;
-  text-align: center;
-  width: 13%;
-  height: 3px;
-  background: #1ABC9C;
 }
 
 .portfolio_content {
@@ -1226,9 +1004,9 @@ textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1330,6 +1108,7 @@ textarea:focus {
 
 .nav_header.change a {
   position: relative;
+  margin: 50px 0;
 }
 
 .nav_header.change a::after {
@@ -1574,6 +1353,8 @@ textarea:focus {
     color: black;
   }
   .about_me {
+    padding-top: 40px;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1583,9 +1364,9 @@ textarea:focus {
             justify-content: space-evenly;
   }
   .picture_profil img {
-    margin-bottom: 20px;
+    margin: 20px 0;
     width: 175px;
-    border-radius: 66%;
+    border-radius: 5%;
   }
   .content_about_me {
     display: -webkit-box;
@@ -1625,6 +1406,7 @@ textarea:focus {
     margin: 0;
   }
   .about_me_text {
+    margin-top: 40px;
     line-height: 2rem;
     width: 85%;
     text-align: center;
@@ -1652,8 +1434,8 @@ textarea:focus {
     margin: 15px 0;
   }
   .coordonne button {
-    background-color: #f2f3f4;
     margin: 0 0 25px 0;
+    color: white;
   }
   .coordonne button::before {
     content: none;
@@ -1685,6 +1467,21 @@ textarea:focus {
   }
   #contact {
     background-color: white;
+  }
+}
+
+@media screen and (max-height: 773px) {
+  .input_sujet {
+    margin-bottom: 10px;
+  }
+  .nav_header.change {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav_header.change a {
+    margin: 25px 0;
+    font-size: 1.5rem;
   }
 }
 
@@ -1723,8 +1520,8 @@ footer {
 }
 
 .img_back {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), color-stop(rgba(0, 0, 0, 0.3)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url(../img/bureau2.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../img/bureau2.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/bureau2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bureau2.jpg);
   background-size: cover;
   background-attachment: fixed;
   height: 350px;

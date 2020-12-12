@@ -3,20 +3,7 @@
     margin: 0 auto;
     background-color:$color_secondary;
     h2{
-        
-        text-align: center;
-        font-size: $size_title;
-        margin-bottom: 5px;
-        &::after{
-            content: "";
-            display: block;
-            margin: 15px auto 50px auto;
-            text-align: center;
-            width: 13%;
-            height: 3px;
-            background: $color_bleu;
-     
-        } 
+        @extend %title_party
     }
     p{
         text-align: center;
@@ -28,6 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 50px;
+    background-color: white;
     height: 100%;
 }
 

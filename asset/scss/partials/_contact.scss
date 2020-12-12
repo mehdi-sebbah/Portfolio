@@ -13,24 +13,12 @@
     justify-content: flex-start;
     width: 100%;
     margin: 50px  0 100px 0;
+    h2{
+        @extend %title_party ;
+        width: 50%; 
+    }
 }
 
-.intro_contact{
-    position: relative;
-    margin: 10px 0;
-    font-size: $size_title;
-    font-weight: 900;
-    &::after{
-        content: "";
-        display: block;
-        margin: 15px auto 50px auto;
-        text-align: center;
-        width: 50%;
-        height: 3px;
-        background: $color_bleu;
- 
-    }   
-}
 
 .contact_form{
     width: 50%;
@@ -51,17 +39,15 @@
         background-color: transparent;
         border: none;
         font-size: 1.2rem;
-        border: 2px solid grey;
-        border-radius: 5px;
+        border-bottom: 2px solid grey;
     }
     textarea{
         width: 100%;
-        margin: 40px 0;
+        margin: 10px 0;
         background-color: transparent;
         border: none;
         font-size: 1.2rem;
-        border: 2px solid grey;
-        border-radius: 5px;
+        border-bottom: 2px solid grey;
     }
     label{
         position: absolute;
@@ -80,6 +66,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+// STYLE INPUT NAME AND EMAIL FOR THE FOCUS AND THE VALIDATION
     .input_name, .input_email{
         position: relative;
         width: 45%;
@@ -98,11 +86,11 @@
         input:focus:invalid{
             border-bottom: 2px solid #CB4335;
             transition: 0.5s;
-        }
-        
+        }   
     }
 }
 
+// STYLE INPUT SUJET AND MESSAGE FOR THE FOCUS AND THE VALIDATION
 .input_sujet, .textarea_message{
     position: relative;
     width: 100%;
@@ -112,26 +100,26 @@
         opacity: 1;
     }
     textarea:focus ~ label, textarea:valid ~ label{
-        transform: translateY(-30px);
-
+        transform: translateY(-20px);
     }
-    input:valid, textarea:valid{
+    input:focus:valid{
         border-bottom: 2px solid $color_bleu;
     }
-    input:focus:invalid, textarea:focus:invalid{
+    textarea:focus:valid{
+        border: 2px solid $color_bleu;
+        border-radius: 5px;
+    }
+    input:focus:invalid{
         border-bottom: 2px solid #CB4335;
     }
-    
+    textarea:focus:invalid{
+        border: 2px solid #CB4335;
+        border-radius: 5px;
+    }
 }
 
 .input_sujet{
-    margin: 20px 0 70px 0;
-}
-
-.textarea_message{
-    label{
-        top: 46px;
-    }
+    margin: 20px 0 50px 0;
 }
 
 .coordonne{
@@ -164,5 +152,3 @@
 .logo_contact{
     display: none;
 }
-
-

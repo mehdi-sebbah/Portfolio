@@ -86,7 +86,7 @@
         opacity: 0;
         height: 100%;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: flex-end;
         transition: 0.2s;
         a{
@@ -174,6 +174,7 @@
     transition: 2.2s;
     a{
         position: relative;
+        margin: 50px 0;
         &::after{
             content: '';
             position: absolute;
