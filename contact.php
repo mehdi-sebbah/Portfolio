@@ -1,5 +1,5 @@
 <?php  require_once 'vendor/autoload.php';
-/*
+
 if(isset($_POST['message'])){
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= 'FROM: ' . $_POST['email'] . "\n";
@@ -11,15 +11,19 @@ if(isset($_POST['message'])){
   $to = 'sebbah.m.dev@gmail.com';
 
   if(mail($to, $subject, $_POST['message'], $headers)){
-    
-    echo json_encode(["message" => "Votre mail a été envoyé"]);
-  }else{
-    
-    echo json_encode(["message" => "Votre envoi a échoué"]);
-  }
-}*/
 
+      echo json_encode(["title" => "Votre message a été envoyé",
+                        "message" => 'Merci '.htmlentities($_POST['name']).'.'
+      ]);
+    }else{
+      
+      echo json_encode(["title" => "Votre envoi a échoué",
+                        "message" => "Ressayer"
+      ]);
+    }
+}
 
+/*
 //GESTION MAIL VIA SWIFTMAILER
 
 // Create the Transport
@@ -54,4 +58,4 @@ if(isset($_POST['name']) && isset($_POST['message'])){
                         "message" => "Ressayer"
       ]);
     }
-}
+}*/
