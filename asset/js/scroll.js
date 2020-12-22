@@ -8,8 +8,6 @@ const skills = document.querySelectorAll(".skill");
 window.addEventListener('scroll', () => {
 
     let scrollValue = (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-    
-    console.log(scrollValue);
 
     bg.style.opacity = 1 - +window.pageYOffset/900;
     

@@ -1,7 +1,29 @@
-<?php require_once 'vendor/autoload.php';
+<?php  require_once 'vendor/autoload.php';
+/*
+if(isset($_POST['message'])){
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= 'FROM: ' . $_POST['email'] . "\n";
+  $headers .= 'Content-Type:text/html; charset="uft-8"' . "\n";
+  $headers .= 'Content-Transfer-Encoding: 8bit';
+
+  $subject = $_POST['sujet'];
+
+  $to = 'sebbah.m.dev@gmail.com';
+
+  if(mail($to, $subject, $_POST['message'], $headers)){
+    
+    echo json_encode(["message" => "Votre mail a été envoyé"]);
+  }else{
+    
+    echo json_encode(["message" => "Votre envoi a échoué"]);
+  }
+}*/
+
+
+//GESTION MAIL VIA SWIFTMAILER
 
 // Create the Transport
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
+if(isset($_POST['name']) && isset($_POST['message'])){
 
     $transport = (new Swift_SmtpTransport('smtp.mailtrap.io', 2525))
       ->setUsername('0cfc70fb6875d4')
@@ -20,5 +42,16 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
     
     // Send the message
     $result = $mailer->send($message);
-    header('Location: index.php');
+
+    if($result){
+    
+      echo json_encode(["title" => "Votre message a été envoyé",
+                        "message" => 'Merci '.htmlentities($_POST['name']).'.'
+      ]);
+    }else{
+      
+      echo json_encode(["title" => "Votre envoi a échoué",
+                        "message" => "Ressayer"
+      ]);
+    }
 }

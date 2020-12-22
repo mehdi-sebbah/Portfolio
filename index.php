@@ -8,7 +8,7 @@
 </div>
 <div class="header_mobile">
     <nav class="nav_header_mobile">
-        <a href="#">Acceuil</a>
+        <a href="#">Accueil</a>
         <a href="#about_me">Présentation</a>
         <a href="#skills">Compétences</a>
         <a href="#portfolio">Projets</a>
@@ -21,7 +21,7 @@
 </div>
 <div class="header">
     <nav class="nav_header">
-        <a href="#">Acceuil</a>
+        <a href="#">Accueil</a>
         <a href="#about_me">Présentation</a>
         <a href="#skills">Compétences</a>
         <a href="#portfolio">Projets</a>
@@ -60,7 +60,21 @@
 
 </section>
 <section id="about_me" class="about_me">
-    <?php require_once 'about_me.php' ?>
+    <div class="picture_profil">
+        <img src="asset/img/photo_profil.jpg" alt="l'auteur du portfolio">
+    </div>
+    <div class="content_about_me">
+        <div class="about_me_title">
+            <h2>MOI, C'EST MEHDI DÉVELOPPEUR WEB FRONT & BACK.</h2>
+            <div class="content_bottom_title"></div>
+        </div>
+        <div class="about_me_text">
+            <p>
+                Passionné de nouvelles technologies et du web, j'ai effectué une formation dans le développement web afin d'allier ma carrière professionnelle et ma passion.
+                Curieux, autodidacte et rigoureux, l'apprentissage continuel de nouvelles technologies est un loisir auquel je me livre chaque jour.
+            </p>
+        </div>
+    </div>
 </section>
 <section id="skills" class="section_skills">
     <h2>COMPÉTENCES</h2>
@@ -141,14 +155,58 @@
 </section>
 
 <section id="portfolio" class="portfolio">
-    <?php require_once 'portefolio.php' ?>
+    <h2>MES PROJETS</h2>
+    <div class="portfolio_content">
+        <div class="card">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="asset/img/italianFood.jpg" alt="site internet italianFood">
+                </div>
+                <div class="content_bx">
+                    <div class="text_box">
+                        <p>Site d'un restaurant italien fait en :</p>
+                        <p>HTML - CSS - JS</p>
+                        <a href="https://medhis.promo-45.codeur.online/italianFood/" target="blank">VOIR LE PROJET</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="asset/img/statue.jpg" alt="Projet d'intégration bootstrap">
+                </div>
+                <div class="content_bx">
+                    <div class="text_box">
+                        <p>Projet d'intégration bootstrap :</p>
+                        <p>HTML - CSS - BOOTSRAP - JS</p>
+                        <a href="https://medhis.promo-45.codeur.online/mark_integration/" target="blank">VOIR LE PROJET</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="asset/img/revision.jpg" alt="site internet révision multiplication">
+                </div>
+                <div class="content_bx">
+                    <div class="text_box">
+                        <p>Site de revision de multiplication :</p>
+                        <p>HTML - CSS - BOOTSRAP - PHP</p>
+                        <a href="https://medhis.promo-45.codeur.online/revision/" target="blank">VOIR LE PROJET</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="img_back"></section>
 <section id="contact">
     <?php include_once 'contact.php' ?>
     <div class="contact">
         <h2 class="intro_contact">CONTACT</h2>
-        <form method="POST" action="contact.php" class="contact_form">
+        <form class="contact_form">
             <div class="form">
                 <div class="info_sender">
                     <div class="input_name">
@@ -157,7 +215,7 @@
                     </div>
                     <div class="input_email">
                         <input type="Email" name="email" required>
-                        <label for="email" >EMAIL</label>
+                        <label for="email">EMAIL</label>
                     </div>
                 </div>
                 <div class="input_sujet">
@@ -183,9 +241,18 @@
             </div>
         </form>
     </div>
+    <div class="modal_container" id="modal_container">
+        <div class="modal">
+            <h4 id="title_modal">test</h4>
+            <p id="text_modal">test</p>
+            <button id="close_modal">
+                Fermer
+            </button>
+        </div>
+    </div>
 </section>
 <div class="arrow_up">
-    <img src="asset/img/arrow_up.png" alt="">
+    <img src="asset/img/arrow_up.png" alt="Boutton dirigeant à la page d'accueil">
 </div>
 
 <?php include_once 'asset/footer.php' ?>

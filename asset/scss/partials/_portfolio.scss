@@ -9,18 +9,18 @@
 }
 
 .portfolio_content{
-    max-width: 620px;
+    max-width: 960px;
     width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
-    grid-gap: 20px;
+    grid-gap: 30px;
     transform-style: preserve-3d;
 
     .card{
         position: relative;
-        height: 150px;
+        height: 300px;
         width: 300px;
         transform-style: preserve-3d;
         perspective: 1000px;
@@ -65,13 +65,24 @@
             transform-style: preserve-3d;
             transform: rotateY(180deg);
 
-            div{
+            
+            .text_box{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
                 transform-style: preserve-3d;
                 padding: 20px 50px;
                 background: $color_bleu;
                 transform: translateZ(100px);
+                height: 150px;
 
+                p{
+                    color: white;
+                }
                 a{
+                    text-decoration: underline white;
+                    font-size: 1.2rem;
                     transition: 0.5s;
                     &:hover{
                         opacity: 0.4;

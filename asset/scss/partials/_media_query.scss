@@ -130,10 +130,6 @@
 
 //PARTIE HOME//
 
-.home{
-    background-size: cover;
-}
-
 .button{
     background-color: white;
     border-radius: 24px;
@@ -180,21 +176,30 @@
     h2{
         display: flex;
        flex-wrap: wrap;
-        text-align: center;
+        text-align: right;
     }
 
     .content_bottom_title{
         width: 45%;
-        transform: translateX(106%);
+        transform: translateX(122%);
         margin: 0;
     }
 
 }
 .about_me_text{
+    opacity: 1;
+    transform: none;
     margin-top: 40px;
     line-height: 2rem;
     width: 85%;
-    text-align: center;
+    text-align: left;
+}
+
+//PARTIE SKILLS
+
+.skill{
+    opacity: 1;
+    transform: none;
 }
 
 //PARTIE CONTACT//
@@ -261,6 +266,16 @@
             margin: 25px 0;
             font-size: 1.5rem;
         }
+    }
+}
+
+@media screen and (max-height: 400px){
+    .home{
+        background-size: contain;
+    }
+    
+    .img_back{
+        background-size: contain;
     }
 }
 

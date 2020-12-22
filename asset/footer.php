@@ -5,6 +5,7 @@
 </body>
 
 <script src="asset/js/scroll.js"></script>
+<script src="asset/js/fetch.js"></script>
 <script src="asset/js/click.js"></script>
 <script src="asset/js/load.js"></script>
 <script src="asset/js/menuBurger.js"></script>
