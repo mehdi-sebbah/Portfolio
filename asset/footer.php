@@ -1,5 +1,7 @@
 <footer>
-    
+    <div class="copyright">
+        <p> © 2020 Mehdi SEBBAH, Tous droits réservés.</p>
+    </div>
 </footer>
 </main>
 </body>

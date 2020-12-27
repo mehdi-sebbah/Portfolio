@@ -8,15 +8,15 @@ const skills = document.querySelectorAll(".skill");
 window.addEventListener('scroll', () => {
 
     let scrollValue = (window.innerHeight + window.scrollY) / document.body.offsetHeight;
-
+    console.log(scrollValue)
     bg.style.opacity = 1 - +window.pageYOffset/900;
     
-    if(scrollValue > 0.31){
+    if(scrollValue > 0.28){
         textAbout.style.opacity ='1';
         textAbout.style.transform = 'none';
     }
 
-    if(scrollValue > 0.48){
+    if(scrollValue > 0.50){
         for(let skill of skills){
             skill.style.opacity = '1';
             skill.style.transform = 'none';

@@ -65,7 +65,7 @@ textarea:focus {
   margin: 15px auto 50px auto;
   text-align: center;
   width: clamp(100px, 10vw, 180px);
-  height: 3px;
+  height: 2px;
   background: #1ABC9C;
 }
 
@@ -266,7 +266,7 @@ textarea:focus {
 .scroll_down {
   height: 50px;
   width: 30px;
-  border: 3px solid white;
+  border: 2px solid white;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1636,16 +1636,30 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 40px;
-  background-color: white;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 75px;
+}
+
+.copyright {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .img_back {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/bureau2.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bureau2.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/metro.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/metro.jpg);
   background-size: cover;
   background-attachment: fixed;
   height: 350px;

@@ -27,13 +27,23 @@ section.change{
 footer{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 40px;
-    background-color: white;
+    align-items: flex-start;
+    height: 75px;
+}
+
+.copyright{
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-start;
+
+    p{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
 }
 
 .img_back{
-    background:  linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/bureau2.jpg);
+    background:  linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/metro.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 350px;
