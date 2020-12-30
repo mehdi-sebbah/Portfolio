@@ -912,8 +912,8 @@ textarea:focus {
   width: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .box .imgBx {
@@ -1317,6 +1317,71 @@ textarea:focus {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 1300px) {
+  .about_me {
+    padding-top: 40px;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .picture_profil img {
+    margin: 20px 0;
+    width: 175px;
+    border-radius: 5%;
+  }
+  .content_about_me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .about_me_title {
+    height: auto;
+    width: 85%;
+    padding-bottom: 10px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .about_me_title h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: right;
+  }
+  .about_me_title .content_bottom_title {
+    width: 45%;
+    -webkit-transform: translateX(122%);
+            transform: translateX(122%);
+    margin: 0;
+  }
+  .about_me_text {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    margin-top: 40px;
+    line-height: 2rem;
+    width: 85%;
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 840px) {
   .header {
     display: none;
@@ -1458,68 +1523,6 @@ textarea:focus {
   .button:hover::before {
     width: 0;
     color: black;
-  }
-  .about_me {
-    padding-top: 40px;
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .picture_profil img {
-    margin: 20px 0;
-    width: 175px;
-    border-radius: 5%;
-  }
-  .content_about_me {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-  }
-  .about_me_title {
-    height: auto;
-    width: 85%;
-    padding-bottom: 10px;
-    -webkit-transform: none;
-            transform: none;
-  }
-  .about_me_title h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    text-align: right;
-  }
-  .about_me_title .content_bottom_title {
-    width: 45%;
-    -webkit-transform: translateX(122%);
-            transform: translateX(122%);
-    margin: 0;
-  }
-  .about_me_text {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-    margin-top: 40px;
-    line-height: 2rem;
-    width: 85%;
-    text-align: left;
   }
   .skill {
     opacity: 1;

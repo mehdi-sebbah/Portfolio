@@ -1,3 +1,60 @@
+@media screen and (max-width: 1300px){
+
+//PARTIE ABOUT_ME//
+
+.about_me{
+    padding-top: 40px;
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+
+.picture_profil{
+    img{
+        margin: 20px 0;
+        width: 175px;
+        border-radius: 5%;
+    }
+}
+
+.content_about_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+.about_me_title{
+    height: auto;
+    width: 85%;
+    padding-bottom: 10px;
+    transform: none;
+
+    h2{
+        display: flex;
+       flex-wrap: wrap;
+        text-align: right;
+    }
+
+    .content_bottom_title{
+        width: 45%;
+        transform: translateX(122%);
+        margin: 0;
+    }
+
+}
+.about_me_text{
+    opacity: 1;
+    transform: none;
+    margin-top: 40px;
+    line-height: 2rem;
+    width: 85%;
+    text-align: left;
+}
+
+}
+
 @media screen and (max-width: 840px){
 
 //HEADER//
@@ -140,59 +197,6 @@
         width: 0;
         color: black;
     }
-}
-
-//PARTIE ABOUT_ME//
-
-.about_me{
-    padding-top: 40px;
-    height: auto;
-    flex-direction: column-reverse;
-    justify-content: space-evenly;
-}
-
-.picture_profil{
-    img{
-        margin: 20px 0;
-        width: 175px;
-        border-radius: 5%;
-    }
-}
-
-.content_about_me{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-}
-
-.about_me_title{
-    height: auto;
-    width: 85%;
-    padding-bottom: 10px;
-    transform: none;
-
-    h2{
-        display: flex;
-       flex-wrap: wrap;
-        text-align: right;
-    }
-
-    .content_bottom_title{
-        width: 45%;
-        transform: translateX(122%);
-        margin: 0;
-    }
-
-}
-.about_me_text{
-    opacity: 1;
-    transform: none;
-    margin-top: 40px;
-    line-height: 2rem;
-    width: 85%;
-    text-align: left;
 }
 
 //PARTIE SKILLS
