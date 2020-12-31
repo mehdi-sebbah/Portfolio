@@ -450,7 +450,7 @@ textarea:focus {
   transition: 1s;
 }
 
-.skill li {
+.skill p {
   text-align: center;
   opacity: 0;
   font-weight: bold;
@@ -463,7 +463,7 @@ textarea:focus {
           animation: opacityImg 0.5s ease forwards;
 }
 
-.skill:hover li {
+.skill:hover p {
   -webkit-animation: opacityLi 0.5s ease forwards;
           animation: opacityLi 0.5s ease forwards;
 }
@@ -1227,7 +1227,7 @@ textarea:focus {
   bottom: -5px;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 1px;
   background-color: #1ABC9C;
   -webkit-transition: 0.2s;
   transition: 0.2s;
