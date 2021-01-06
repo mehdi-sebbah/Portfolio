@@ -1227,7 +1227,7 @@ textarea:focus {
   bottom: -5px;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: #1ABC9C;
   -webkit-transition: 0.2s;
   transition: 0.2s;
