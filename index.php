@@ -212,6 +212,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="asset/img/crud_movie.jpg" alt="Crud sur le cinéma">
+                        </div>
+                        <div class="content_bx">
+                            <div class="text_box">
+                                <p>Crud sur le cinéma :</p>
+                                <p>HTML - CSS - BOOTSRAP - PHP - SQL</p>
+                                <a href="https://medhis.promo-45.codeur.online/cine+/" target="blank">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="asset/img/bomberman.png" alt="mini-jeu bomberman">
+                        </div>
+                        <div class="content_bx">
+                            <div class="text_box">
+                                <p>Mini-jeu (Bomberman)</p>
+                                <p>HTML - CSS - JS</p>
+                                <p>Exercice d'algorithmique</p>
+                                <p>WIP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="img_back"></div>
