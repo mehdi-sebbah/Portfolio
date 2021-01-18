@@ -236,7 +236,7 @@
                                 <p>Mini-jeu (Bomberman)</p>
                                 <p>HTML - CSS - JS</p>
                                 <p>Exercice d'algorithmique</p>
-                                <p>WIP</p>
+                                <a href="https://medhis.promo-45.codeur.online/bomberman/" target="blank">VOIR LE PROJET</a>
                             </div>
                         </div>
                     </div>
